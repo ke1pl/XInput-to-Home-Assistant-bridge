@@ -1,14 +1,15 @@
-Xbox-Controller-for-Python
+XInput to Home Assitant bridge
 ==============================
 
-Use an Xbox 360 /XBone Controller with Python on Windows
+Use an XInput to expose some enevts to Home Assistant via webhook.
 
-A module for getting input from Microsoft XBox controllers via the XInput library on Windows.
+Setup:
+1. Create Home Assistant automation (use `home_assistant_automation_example.yaml` as the example)
+1. Run `pip install pyglet` 
+1. Copy `config.ini.example` to `config.ini`
+	1. Update values in `config.ini`
 
-Adapted from Jason R. Coombs' code here:
-http://pydoc.net/Python/jaraco.input/1.0.1/jaraco.input.win32.xinput/
-under the MIT licence terms
-
-* Upgraded to Python 3
-* Modified to add deadzones, reduce noise, and support vibration
-* Only req is Pyglet ~1.2alpha1 or higher~ confirmed to work with 1.2.4 (latest): ```pip install pyglet``` 
+Usage:
+1. Connect XInput device
+1. Run `python bridge.py`
+1. Hold "Left Shoulder" and "Menu" buttons and press "Directional Pad Up" button - you should see a notification in Home Asssistant

@@ -376,6 +376,6 @@ def sample_first_joystick():
         j.dispatch_events()
         time.sleep(.01)
 
-if __name__ == "__main__":
-    sample_first_joystick()
-    # determine_optimal_sample_rate()
+# if __name__ == "__main__":
+#     sample_first_joystick()
+#     # determine_optimal_sample_rate()

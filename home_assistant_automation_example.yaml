@@ -1,0 +1,38 @@
+description: ""
+triggers:
+  - trigger: webhook
+    allowed_methods:
+      - POST
+    local_only: true
+    webhook_id: "-Uwjfc-sTToI3d9CkAAJk376c"
+conditions: []
+actions:
+  - action: persistent_notification.create
+    metadata: {}
+    data:
+      message: >-
+        button {{ trigger.json.button }} moved to the state {{
+        trigger.json.state }}
+      title: XInput to Home Assistant Bridge event
+    enabled: false
+  - if:
+      - condition: template
+        value_template: "{{ trigger.json.button == 1 and trigger.json.state == 1 }}"
+    then:
+      - action: persistent_notification.create
+        metadata: {}
+        data:
+          message: Directional pad Up was pressed
+          title: XInput to Home Assistant Bridge event
+  - if:
+      - condition: template
+        value_template: "{{ trigger.json.button == 1 and trigger.json.state == 0 }}"
+    then:
+      - action: persistent_notification.create
+        metadata: {}
+        data:
+          message: Directional pad Up was released
+          title: XInput to Home Assistant Bridge event
+mode: parallel
+max: 10
+alias: Webhook for XInput

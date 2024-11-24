@@ -1,0 +1,7 @@
+[General]
+home_assistant_url = http://192.168.0.1:8123
+webhook_id = -Uwjfc-sTToI3d9CkAAJk376c
+; 9 - left shoulder button
+chord_button_1 = 9 
+; 5 - menu button
+chord_button_2 = 5
