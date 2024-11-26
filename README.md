@@ -16,4 +16,4 @@ Usage:
 1. Hold "Left Shoulder" and "Menu" buttons and press "Directional Pad Up" button - you should see a notification in Home Asssistant
 
 Video demo:
-[https://www.youtube.com/shorts/1Z0PqS0FhlM](https://www.youtube.com/shorts/1Z0PqS0FhlM)
+[https://www.youtube.com/watch?v=1Z0PqS0FhlM](https://www.youtube.com/watch?v=1Z0PqS0FhlM)
